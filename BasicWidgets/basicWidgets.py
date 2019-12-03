@@ -4,6 +4,7 @@ from tkinter import ttk
 
 def refreshStates():
     buttonStatus.set(button.state())
+    labelStatus.set(label2.state())
     checkStatus.set(checkbutton.state())
     radioStatus1.set(radio1.state())
     radioStatus2.set(radio2.state())
@@ -33,6 +34,15 @@ frame['borderwidth'] = 10
 frame['relief'] = 'ridge'
 frame.pack()
 
+#Label
+labelStatus = StringVar()
+label3 = ttk.Label(frame, textvariable=labelStatus)
+label3.grid(row=9, column=0)
+
+label2 = ttk.Label(frame)
+label2['relief'] = GROOVE
+label2['text'] = "ssdasdas"
+label2.grid(row=8, column=0)
 
 #Button
 buttonStatus = StringVar()
