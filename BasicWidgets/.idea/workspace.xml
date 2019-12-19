@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7a02741-c966-4e3d-997d-e2874f6d1b24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragdrop.py" beforeDir="false" afterPath="$PROJECT_DIR$/dragdrop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Examen5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MasWidgets/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MasWidgets/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +45,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.dragdrop">
+  <component name="RunManager" selected="Python.GridColor">
     <configuration name="BasicWidgetsProfe" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BasicWidgets" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,10 +153,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.GridColor" />
+        <item itemvalue="Python.ColorGridProfe" />
         <item itemvalue="Python.dragdrop" />
         <item itemvalue="Python.BasicWidgetsProfe" />
-        <item itemvalue="Python.ColorGridProfe" />
-        <item itemvalue="Python.GridColor" />
         <item itemvalue="Python.basicWidgets" />
       </list>
     </recent_temporary>
