@@ -1,6 +1,33 @@
 from tkinter import *
 from tkinter import ttk
 
+class MoveManager():
+    def add_dragable(self, widget):
+        widget.bind("<Left>", self.on_start)
+        widget.bind("<Right>", self.on_drag)
+        widget.bind("<Up>", self.on_drop)
+        widget.bind("<Down>", self.on_drop)
+
+    def on_start(self, event):
+        # you could use this method to create a floating window
+        # that represents what is being dragged.
+        pass
+
+    def on_drag(self, event):
+        # you could use this method to move a floating window that
+        # represents what you're dragging
+        pass
+
+    def on_drop(self, event):
+        # find the widget under the cursor
+        x,y = event.widget.winfo_pointerxy()
+        target = event.widget.winfo_containing(x,y)
+        try:
+            target['background'] = event.widget['background']
+            event.widget['background'] = ''
+        except:
+            pass
+
 
 def mover(widget):
     widget['background'] = 'red'
