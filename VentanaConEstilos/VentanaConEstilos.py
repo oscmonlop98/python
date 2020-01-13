@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+from tkinter import filedialog
 
 
 def donothing():
@@ -52,6 +53,9 @@ def donothing():
     cbresaltapareja = ttk.Checkbutton(f1, text='Resaltar parejas de corchetes')
     cbresaltapareja.grid(row=8, column=0, sticky='w')
 
+    buttonCambios = ttk.Button(f1, text='Aplicar cambios', command=lambda: aplicarcambios())
+    buttonCambios.grid(row=9, column=0)
+
     # Editar
     chbxnegrita = ttk.Checkbutton(f2, text='Negrita')
     chbxnegrita.grid(row=1, column=0, sticky='w')
@@ -70,6 +74,10 @@ def donothing():
     combo.grid(row=1, column=0)
 
 
+def aplicarcambios():
+    cajatexto.configure(font='bold')
+
+
 def nuevahoja():
     hoja = ttk.Frame(hojastexto)
 
@@ -79,19 +87,28 @@ def nuevahoja():
     cajatexto.grid(row=0, column=0, sticky='nwse')
 
 
+def guardarArchivo():
+    filename = filedialog.asksaveasfilename()
+
 root = Tk()
 root.columnconfigure(0, weight=2)
 root.rowconfigure(0, weight=2)
 
 # **********MENÚ*************
 menubar = Menu(root)
+
+archivomenu = Menu(menubar, tearoff=0)
+menubar.add_cascade(label="Archivo", menu=archivomenu)
+archivomenu.add_command(label="Guardar", command=guardarArchivo)
+
 hojamenu = Menu(menubar, tearoff=0)
-hojamenu.add_command(label="Hoja", command=nuevahoja)
 menubar.add_cascade(label="Nueva", menu=hojamenu)
+hojamenu.add_command(label="Hoja", command=nuevahoja)
 
 editmenu = Menu(menubar, tearoff=0)
-editmenu.add_command(label="Preferencias", command=donothing)
 menubar.add_cascade(label="Editar", menu=editmenu)
+editmenu.add_command(label="Preferencias", command=donothing)
+
 
 # **********ESTILOS*************
 s = ttk.Style()
