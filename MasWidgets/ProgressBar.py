@@ -18,7 +18,7 @@ def locuraTotal(widget, color):
         p['value'] = len(a)
         p.update()
         if (num in a):
-            for i in range(1,100000):
+            for i in range(1,1000000):
                 pass
         else:
             a.append(num)

@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="284e96c5-cf7f-4b99-addc-16cbfdaf36cf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../MasWidgets/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VentanaConEstilos/pruebas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MasWidgets/.idea/MasWidgets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../MasWidgets/.idea/MasWidgets.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MasWidgets/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MasWidgets/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MasWidgets/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MasWidgets/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MasWidgets/ProgressBar.py" beforeDir="false" afterPath="$PROJECT_DIR$/../MasWidgets/ProgressBar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../VentanaConEstilos/VentanaConEstilos.py" beforeDir="false" afterPath="$PROJECT_DIR$/../VentanaConEstilos/VentanaConEstilos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VentanaConEstilos/venv/pruebas.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

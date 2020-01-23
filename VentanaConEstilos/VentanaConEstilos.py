@@ -101,7 +101,7 @@ archivomenu = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="Archivo", menu=archivomenu)
 archivomenu.add_command(label="Guardar", command=guardarArchivo)
 
-hojamenu = Menu(menubar, tearoff=0)
+hojamenu = Menu(menubar, tearoff=1)
 menubar.add_cascade(label="Nueva", menu=hojamenu)
 hojamenu.add_command(label="Hoja", command=nuevahoja)
 
@@ -146,7 +146,7 @@ hojastexto.add(hoja1, text='New File')
 
 cajatexto = Text(hoja1)
 cajatexto.grid(row=0, column=0)
-
+print(s.theme_names())
 
 root.config(menu=menubar)
 root.update()
