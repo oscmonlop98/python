@@ -1,7 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 
-lastx, lasty = 0, 0
+lastx, lasty = 300,200
+nextx, nexty = 300,200
 
 color = "black"
 def setColor(newcolor):
@@ -12,15 +13,19 @@ def xy(event):
     global lastx, lasty
     lastx, lasty = event.x, event.y
 
-def addLine(event):
-    global lastx, lasty
-    canvas.create_line((lastx, lasty, event.x, event.y), fill=color)
-    lastx, lasty = event.x, event.y
 
-def onObjectClick(event):
-    global lastx, lasty
-    canvas.create_line((lastx, lasty, event.lastx+1, event.lasty+1), fill='black')
-    lastx, lasty = event.lastx, event.lasty
+def onObjectClick():
+    global nextx
+    if nextx >= 10:
+        nextx -= 10
+        addLine()
+
+def addLine():
+    global lastx, lasty, nextx, nexty
+    canvas.create_line((lastx, lasty, nextx, nexty))
+    lastx, lasty = nextx, nexty
+
+
 
 
 root = Tk()
@@ -57,7 +62,7 @@ canvas2.grid(column=0, row=0, sticky=(N, W, E, S))
 pointsleft = [40,1, 40, 40, 15,23, 40,1]
 id = canvas2.create_polygon(pointsleft, outline='#f11', fill='#1f1', width=2)
 
-canvas2.tag_bind(id, '<ButtonPress-1>', onObjectClick)
+canvas2.tag_bind(id, '<ButtonPress-1>', lambda x: onObjectClick())
 
 pointsright = [46,1, 46,40, 70,23, 46,1]
 canvas2.create_polygon(pointsright, outline='#f11', fill='#1f1', width=2)
