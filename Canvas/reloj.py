@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 import numpy as np
 
+
 def homogenize(coords: list):
     for i in range(len(coords)):
         coords[i].append(1)
@@ -24,6 +25,14 @@ def getrotation(deg:float)->list:
     return [[np.cos(rad), np.sin(rad), 0], [-np.sin(rad), np.cos(rad), 0], [0, 0, 1]]
 
 
+color = "red"
+
+
+def setColor(newcolor):
+    global color
+    color = newcolor
+
+
 root = Tk()
 f = ttk.Frame()
 f.pack()
@@ -32,7 +41,8 @@ cnv.grid(row=0, column=0)
 
 
 circulo = [375,375,425,425]
-cnv.create_oval(circulo, fill='#f12', width=3)
+id = cnv.create_oval(circulo, fill=color, width=3)
+cnv.tag_bind(id, "<Button-1>", lambda x: setColor("black"))
 
 ovalogrande = [780,780,30,30]
 cnv.create_oval(ovalogrande, width=2)
@@ -58,7 +68,8 @@ for rot in range(0,360,6):
     for i in range(len(short)):
         temp.append(np.dot(short[i],transform).tolist())
     dehomogenize(temp)
-    cnv.create_line(temp)
+    ida = cnv.create_line(temp, fill=color)
+
 
 large = [[-350, 0],[-300, 0]]
 homogenize(large)
